@@ -1,0 +1,9 @@
+<resources>
+    <string name="app_name">sem6project</string>
+    <string name="text2">It is now very easy to reach the\nbest quality among all the\n product on the internet</string>
+    <string name="text1">The Right Address\nFor Shopping\nAnyday</string>
+    <string name="we_will_send_you_the_password_reset_link_to_your_email">We will send you the password reset link to your Email</string>
+    <string name="reset_password">Reset Password</string>
+    <string name="send">Send</string>
+    <string name="cancel">Cancel</string>
+</resources>

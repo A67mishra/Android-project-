@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "404153355206",
+    "project_id": "sem6project-b09ce",
+    "storage_bucket": "sem6project-b09ce.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:404153355206:android:43c7e4bee283da64fd00c7",
+        "android_client_info": {
+          "package_name": "com.example.sem6project"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCmTbgNqVLHOaHKPOOq-vdXw7CC9__tviY"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

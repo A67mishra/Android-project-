@@ -1,0 +1,159 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/blury_background"
+        android:scaleType="centerCrop"/>
+
+<androidx.constraintlayout.widget.ConstraintLayout
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/appname2"
+        style="@style/h3"
+        android:layout_marginTop="112dp"
+        android:drawableStart="@drawable/ic_kleine_shape"
+        android:drawablePadding="6dp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        android:text="Kliene"/>
+
+    <TextView
+        android:id="@+id/Letslogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        style="@style/h4"
+        android:layout_marginTop="15dp"
+        app:layout_constraintTop_toBottomOf="@id/appname2"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        android:text="Let's Login"/>
+<!--        android:textAlignment="center"-->
+<!--        android:gravity="center"-->
+<!--        android:textSize="35sp"/>-->
+
+    <TextView
+        android:id="@+id/Donthaveaccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        app:layout_constraintTop_toBottomOf="@id/Letslogin"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:text="Don't have an account?Register now"
+        android:layout_marginTop="15dp"/>
+
+    <EditText
+        android:id="@+id/emaillogin"
+        style="@style/editText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittextHeight"
+        android:layout_marginTop="50dp"
+        android:hint="Email"
+        android:padding="5dp"
+        android:inputType="textEmailAddress"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginright"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        app:layout_constraintTop_toBottomOf="@id/Donthaveaccount" />
+
+
+    <EditText
+        android:id="@+id/passwordlogin"
+        style="@style/editText"
+        android:layout_width="0dp"
+        android:layout_height="@dimen/edittextHeight"
+        android:layout_marginTop="15dp"
+        android:hint="Password"
+        android:inputType="textPassword"
+        android:padding="5dp"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginright"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        app:layout_constraintTop_toBottomOf="@id/emaillogin" />
+
+
+    <TextView
+        android:id="@+id/forgotpasswordLogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        app:layout_constraintTop_toBottomOf="@id/passwordlogin"
+        android:textAlignment="center"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:text="Forgot Password ?"
+        android:layout_marginTop="15dp"/>
+
+    <br.com.simplepass.loadingbutton.customViews.CircularProgressButton
+        android:layout_width="0dp"
+        android:layout_height="@dimen/mediumButtonHeight"
+        style="@style/blueButtonStyle"
+        android:id="@+id/loginbutton"
+        app:spinning_bar_color="@color/white"
+        app:layout_constraintTop_toBottomOf="@id/forgotpasswordLogin"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginright"
+        android:layout_marginTop="15dp"
+        android:text="Login"/>
+
+    <ImageView
+        android:id="@+id/facebooklogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginbutton"
+        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/facebook_login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Facebook"
+        app:layout_constraintStart_toStartOf="@+id/facebooklogin"
+        app:layout_constraintBottom_toBottomOf="@id/facebooklogin"
+        app:layout_constraintTop_toTopOf="@id/facebooklogin"
+        app:layout_constraintEnd_toEndOf="@id/facebooklogin"/>
+
+    <ImageView
+        android:id="@+id/Googlelogin"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintTop_toBottomOf="@id/loginbutton"
+        app:layout_constraintEnd_toEndOf="@id/guidelineLoginright"
+        android:layout_marginTop="13dp"
+        android:src="@drawable/google_login"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Google"
+        app:layout_constraintStart_toStartOf="@+id/Googlelogin"
+        app:layout_constraintBottom_toBottomOf="@id/Googlelogin"
+        app:layout_constraintTop_toTopOf="@id/Googlelogin"
+        app:layout_constraintEnd_toEndOf="@id/Googlelogin"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLoginleft"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.09" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guidelineLoginright"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.91" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</FrameLayout>

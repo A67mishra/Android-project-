@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content "
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="10dp"
+        android:layout_marginTop="10dp"
+        android:fontFamily="@font/poppins_thin"
+        android:text="@string/reset_password"
+        android:id="@+id/reset"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="10dp"
+        android:fontFamily="@font/poppins_light"
+        android:textStyle="bold"
+        android:textColor="@color/black"
+        android:id="@+id/resetpasswordtext"
+        android:text="@string/we_will_send_you_the_password_reset_link_to_your_email"
+        android:textSize="12sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/reset"
+        app:layout_constraintTop_toBottomOf="@id/reset"/>
+
+    <EditText
+        android:layout_width="0dp"
+        android:id="@+id/resetpasswordedittext"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintEnd_toEndOf="@id/resetpasswordtext"
+        app:layout_constraintStart_toStartOf="@id/resetpasswordtext"
+        app:layout_constraintTop_toBottomOf="@id/resetpasswordtext"/>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="20dp"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/resetpasswordedittext"
+        app:layout_constraintStart_toStartOf="@id/resetpasswordedittext"
+        app:layout_constraintTop_toBottomOf="@id/resetpasswordedittext">
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/white_background"
+            android:layout_weight="1"
+            android:id="@+id/btnCancelpasswordreset"
+            android:text="@string/cancel"
+            android:textAllCaps="false"/>
+
+        <androidx.appcompat.widget.AppCompatButton
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginEnd="5dp"
+            android:background="@drawable/blue_background"
+            android:layout_weight="1"
+            android:textColor="@color/white"
+            android:id="@+id/btnSendpasswordreset"
+            android:text="@string/send"
+            android:textAllCaps="false"/>
+
+    </LinearLayout>
+
+</androidx.constraintlayout.widget.ConstraintLayout>
