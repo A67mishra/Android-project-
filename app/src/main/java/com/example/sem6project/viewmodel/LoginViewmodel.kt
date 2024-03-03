@@ -1,5 +1,4 @@
 package com.example.sem6project.viewmodel
-
 import androidx.lifecycle.ViewModel
 import androidx.lifecycle.viewModelScope
 import com.example.sem6project.util.Resource

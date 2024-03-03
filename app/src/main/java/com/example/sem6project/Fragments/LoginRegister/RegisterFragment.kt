@@ -1,6 +1,7 @@
 
 package com.example.sem6project.Fragments.LoginRegister
 
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import android.view.LayoutInflater
@@ -12,15 +13,14 @@ import androidx.fragment.app.viewModels
 import androidx.lifecycle.lifecycleScope
 import androidx.navigation.fragment.findNavController
 import com.example.sem6project.R
+import com.example.sem6project.activities.ShoppingActivity
 import com.example.sem6project.data.User
 import com.example.sem6project.databinding.FragmentRegisterBinding
 import com.example.sem6project.util.RegisterValidation
 import com.example.sem6project.util.Resource
 import com.example.sem6project.viewmodel.RegisterViewmodel
 import dagger.hilt.android.AndroidEntryPoint
-import dagger.hilt.android.WithFragmentBindings
 import kotlinx.coroutines.Dispatchers
-import kotlinx.coroutines.flow.collect
 import kotlinx.coroutines.withContext
 
 

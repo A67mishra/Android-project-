@@ -12,7 +12,12 @@
           "package_name": "com.example.sem6project"
         }
       },
-      "oauth_client": [],
+      "oauth_client": [
+        {
+          "client_id": "404153355206-e616li51vq54r68fqf0pdvn34r0gg0aa.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
       "api_key": [
         {
           "current_key": "AIzaSyCmTbgNqVLHOaHKPOOq-vdXw7CC9__tviY"
@@ -20,7 +25,12 @@
       ],
       "services": {
         "appinvite_service": {
-          "other_platform_oauth_client": []
+          "other_platform_oauth_client": [
+            {
+              "client_id": "404153355206-e616li51vq54r68fqf0pdvn34r0gg0aa.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
         }
       }
     }

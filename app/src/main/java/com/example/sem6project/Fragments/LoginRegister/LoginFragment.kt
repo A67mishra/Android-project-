@@ -23,6 +23,7 @@ import dagger.hilt.android.AndroidEntryPoint
 class LoginFragment:Fragment(R.layout.fragment_login) {
     private lateinit var binding: FragmentLoginBinding
 
+
     private val viewModel by viewModels<LoginViewmodel>()
 
     override fun onCreateView(
@@ -33,8 +34,6 @@ class LoginFragment:Fragment(R.layout.fragment_login) {
         binding= FragmentLoginBinding.inflate(inflater)
         return binding.root
     }
-
-
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
@@ -66,7 +65,7 @@ class LoginFragment:Fragment(R.layout.fragment_login) {
                     is Resource.Success->{
                         binding.loginbutton.revertAnimation()
                         Intent(requireActivity(), ShoppingActivity::class.java).also { intent ->
-                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TASK or Intent.FLAG_ACTIVITY_NEW_TASK)
+                            intent.addFlags(Intent.FLAG_ACTIVITY_CLEAR_TOP or Intent.FLAG_ACTIVITY_NEW_TASK)
                             startActivity(intent)
                         }
                     }
@@ -79,7 +78,7 @@ class LoginFragment:Fragment(R.layout.fragment_login) {
                 }
             }
         }
-    // lifecycleScope is use to manage async task an background task in android development
+
         lifecycleScope.launchWhenStarted {
             viewModel.resetPassword.collect{
                 when (it) {

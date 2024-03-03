@@ -18,7 +18,7 @@
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:layout_marginTop="105dp"
-            android:text="Kliene"
+            android:text="Shoppe"
             style="@style/h3"
             android:id="@+id/appname3"
             android:drawablePadding="6dp"
@@ -116,41 +116,7 @@
             app:layout_constraintStart_toStartOf="@id/registerleft"/>
 
 
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/facebook_login"
-            android:id="@+id/rfb"
-            android:layout_marginTop="13dp"
-            app:layout_constraintTop_toBottomOf="@id/registerbutton"
-            app:layout_constraintStart_toStartOf="@id/registerleft"/>
 
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Facebook"
-            app:layout_constraintTop_toTopOf="@+id/rfb"
-            app:layout_constraintStart_toStartOf="@id/rfb"
-            app:layout_constraintEnd_toEndOf="@id/rfb"
-            app:layout_constraintBottom_toBottomOf="@id/rfb"/>
-
-        <ImageView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:src="@drawable/google_login"
-            android:id="@+id/rgb"
-            android:layout_marginTop="13dp"
-            app:layout_constraintTop_toBottomOf="@id/registerbutton"
-            app:layout_constraintEnd_toEndOf="@id/registerright"/>
-
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Google"
-            app:layout_constraintTop_toTopOf="@+id/rfb"
-            app:layout_constraintStart_toStartOf="@id/rgb"
-            app:layout_constraintEnd_toEndOf="@id/rgb"
-            app:layout_constraintBottom_toBottomOf="@id/rgb"/>
 
         <androidx.constraintlayout.widget.Guideline
             android:id="@+id/registerleft"

@@ -26,6 +26,7 @@
             app:destination="@id/registerFragment"
             app:popUpTo="@id/accountoptionsFragment"
             app:enterAnim="@anim/from_bottom"/>
+
     </fragment>
     <fragment
         android:id="@+id/registerFragment"

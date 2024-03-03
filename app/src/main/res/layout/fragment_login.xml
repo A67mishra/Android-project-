@@ -25,7 +25,7 @@
         android:textStyle="bold"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
-        android:text="Kliene"/>
+        android:text="Shoppe"/>
 
     <TextView
         android:id="@+id/Letslogin"
@@ -103,41 +103,7 @@
         android:layout_marginTop="15dp"
         android:text="Login"/>
 
-    <ImageView
-        android:id="@+id/facebooklogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/loginbutton"
-        app:layout_constraintStart_toStartOf="@id/guidelineLoginleft"
-        android:layout_marginTop="13dp"
-        android:src="@drawable/facebook_login"/>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Facebook"
-        app:layout_constraintStart_toStartOf="@+id/facebooklogin"
-        app:layout_constraintBottom_toBottomOf="@id/facebooklogin"
-        app:layout_constraintTop_toTopOf="@id/facebooklogin"
-        app:layout_constraintEnd_toEndOf="@id/facebooklogin"/>
-
-    <ImageView
-        android:id="@+id/Googlelogin"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        app:layout_constraintTop_toBottomOf="@id/loginbutton"
-        app:layout_constraintEnd_toEndOf="@id/guidelineLoginright"
-        android:layout_marginTop="13dp"
-        android:src="@drawable/google_login"/>
-
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Google"
-        app:layout_constraintStart_toStartOf="@+id/Googlelogin"
-        app:layout_constraintBottom_toBottomOf="@id/Googlelogin"
-        app:layout_constraintTop_toTopOf="@id/Googlelogin"
-        app:layout_constraintEnd_toEndOf="@id/Googlelogin"/>
 
     <androidx.constraintlayout.widget.Guideline
         android:id="@+id/guidelineLoginleft"

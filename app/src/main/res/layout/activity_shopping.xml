@@ -7,31 +7,31 @@
     tools:context=".activities.ShoppingActivity">
 
     <fragment
-        android:id="@+id/shoppingHostFragment"
-        android:name="androidx.navigation.fragment.NavHostFragment"
         android:layout_width="match_parent"
         android:layout_height="0dp"
+        android:id="@+id/shoppinghostfragment"
+        android:name="androidx.navigation.fragment.NavHostFragment"
         app:defaultNavHost="true"
-        app:layout_constraintEnd_toEndOf="parent"
+        app:navGraph="@navigation/shopping_garph"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent"
-        app:navGraph="@navigation/shopping_graph"
-        app:layout_constraintBottom_toTopOf="@id/bottomNavigation"/>
-
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/bottomnavigation"
+        app:layout_constraintTop_toTopOf="parent"/>
+    
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/bottomNavigation"
         android:layout_width="match_parent"
         android:layout_height="70dp"
+        app:menu="@menu/bottom_navigation_menu"
+        app:labelVisibilityMode="unlabeled"
         android:background="@drawable/bottom_navigation_background"
-        app:elevation="0dp"
-        app:itemIconTint="@drawable/bottom_nav_item_background"
+        android:elevation="0dp"
         app:itemPaddingBottom="10dp"
         app:itemPaddingTop="10dp"
         app:itemRippleColor="@color/g_white"
-        app:labelVisibilityMode="unlabeled"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
+        android:id="@+id/bottomnavigation"
         app:layout_constraintStart_toStartOf="parent"
-        app:menu="@menu/bottom_navigation_menu" />
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:itemIconTint="@drawable/bottom_nav_item_background"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
