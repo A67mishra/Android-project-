@@ -20,9 +20,53 @@ class MainCategoryViewModel @Inject constructor(
     private val _specialProduct= MutableStateFlow<Resource<List<Product>>>(Resource.Unspecified())
     val specialProduct:StateFlow<Resource<List<Product>>> =_specialProduct
 
+    private val _bestdealProducts= MutableStateFlow<Resource<List<Product>>>(Resource.Unspecified())
+    val bestdealProducts:StateFlow<Resource<List<Product>>> = _bestdealProducts
+
+    private val _bestProducts= MutableStateFlow<Resource<List<Product>>>(Resource.Unspecified())
+    val bestProducts:StateFlow<Resource<List<Product>>> = _bestProducts
+
     //init blocks are used to initialize the properties of a class.They are executed when an instance of the class is created
     init {
         fetchSpecialProduct()
+        fetchBestdeals()
+        fetchBestProducts()
+    }
+
+    fun fetchBestdeals(){
+        viewModelScope.launch {
+            _bestdealProducts.emit(Resource.Loading())
+        }
+
+        firestore.collection("Products")
+            .whereEqualTo("category","Best Deals").get().addOnSuccessListener {result->
+            val BestDealsProducts=result.toObjects(Product::class.java)
+            viewModelScope.launch {
+                _bestdealProducts.emit(Resource.Success(BestDealsProducts))
+            }
+        }.addOnFailureListener {
+            viewModelScope.launch {
+                _bestdealProducts.emit(Resource.Error(it.message.toString()))
+            }
+        }
+    }
+
+    fun fetchBestProducts(){
+        viewModelScope.launch {
+            _bestProducts.emit(Resource.Loading())
+        }
+
+        firestore.collection("Products")
+            .get().addOnSuccessListener {result->
+                val BestProducts=result.toObjects(Product::class.java)
+                viewModelScope.launch {
+                    _bestProducts.emit(Resource.Success(BestProducts))
+                }
+            }.addOnFailureListener {
+                viewModelScope.launch {
+                    _bestProducts.emit(Resource.Error(it.message.toString()))
+                }
+            }
     }
 
 

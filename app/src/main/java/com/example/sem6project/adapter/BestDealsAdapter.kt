@@ -6,14 +6,24 @@ import androidx.recyclerview.widget.AsyncListDiffer
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
+import com.bumptech.glide.Glide
 import com.example.sem6project.data.Product
 import com.example.sem6project.databinding.BestDealsRvItemBinding
 
 class BestDealsAdapter:RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder>() {
 
-    inner class BestDealsViewHolder(binding:BestDealsRvItemBinding):ViewHolder(binding.root){
-        fun bind(Product:Product){
-
+    inner class BestDealsViewHolder(private val binding:BestDealsRvItemBinding):ViewHolder(binding.root){
+        fun bind(product: Product){
+            binding.apply {
+                Glide.with(itemView).load(product.images[0]).into(imgBestDeal)
+                product.offerPercentage?.let {
+                    val remainingPricePercentage=1f-it
+                    val priceAfterOffer= remainingPricePercentage * product.price
+                    tvNewPrice.text="$ ${String.format("%.2f",priceAfterOffer)}"
+                }
+                tvOldPrice.text="$ ${product.price}"
+                tvDealProductName.text=product.name
+            }
         }
     }
 
@@ -48,5 +58,5 @@ class BestDealsAdapter:RecyclerView.Adapter<BestDealsAdapter.BestDealsViewHolder
             onClick?.invoke(product)
         }
     }
-     var onClick:((Product))->(Unit)?=null
+     var onClick: ((Product) -> Unit?)? =null
 }
